@@ -1,0 +1,28 @@
+{
+  "cesVersion": "2.12.2",
+  "projectName": "FlavaQuest",
+  "packages": [
+    {
+      "name": "nativewind",
+      "type": "styling"
+    }
+  ],
+  "flags": {
+    "noGit": false,
+    "noInstall": false,
+    "overwrite": false,
+    "importAlias": true,
+    "packageManager": "npm",
+    "eas": false
+  },
+  "packageManager": {
+    "type": "npm",
+    "version": "10.8.2"
+  },
+  "os": {
+    "type": "Linux",
+    "platform": "linux",
+    "arch": "x64",
+    "kernelVersion": "5.15.167.4-microsoft-standard-WSL2"
+  }
+}
