@@ -10,7 +10,15 @@
       "tsconfigPaths": true
     },
     "plugins": [
-      "expo-build-properties"
+      "expo-build-properties",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(FlavaQuest) to access your camera",
+          "microphonePermission": "Allow $(FlavaQuest) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
     ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",

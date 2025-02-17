@@ -106,7 +106,6 @@ When you are contributing to the project please follow these guidelines to keep 
     * [TypeScript Crash Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gNhFQgS4edYLqP7LkZcFMN)
     * [React Native documentation](https://reactnative.dev/docs/getting-started)
     * [React Components and APIs](https://reactnative.dev/docs/components-and-apis)
-    * [Design Doc](https://docs.google.com/document/d/1xxeK5M8tYmlafwV0b3F44bvuD1XVOWeUTq9Ya_wcBCw/edit#heading=h.iy3b9413elmv)
     * [Expo in 100 seconds](https://www.youtube.com/watch?v=vFW_TxKLyrE)
     * [Tailwind Documentation](https://tailwindcss.com/docs/installation)
     * [NativeWind](https://www.nativewind.dev/overview/)
@@ -142,9 +141,6 @@ A: If you don't want to use VS Code you are free to use any other editor of your
 **Q: What is NativeWind and why do we need to use it?**
 
 A: NativeWind is a CSS framework that allows you to write responsive styles a lot easier. NativeWind uses Tailwind CSS as scripting language to create a universal styling system.
-
-
-
 
 
 ## Learn more

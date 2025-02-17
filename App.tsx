@@ -1,4 +1,4 @@
-import { ScreenContent } from 'components/ScreenContent';
+import Camera from 'components/Camera';
 import { StatusBar } from 'expo-status-bar';
 
 import './global.css';
@@ -6,7 +6,7 @@ import './global.css';
 export default function App() {
   return (
     <>
-      <ScreenContent title="Home" path="App.tsx" />
+      <Camera/>
       <StatusBar style="auto" />
     </>
   );
