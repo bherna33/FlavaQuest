@@ -1,24 +1,11 @@
-import { Tabs} from 'expo-router';
+import { Tabs } from 'expo-router';
 import React from 'react';
 import "../../global.css"
 
 export default function TabLayout() {
 
   return (
-    <Tabs
-      // screenOptions={{
-      // tabBarStyle: { 
-      //   backgroundColor: "bg-sky-600", // Dark background
-
-      // },
-      // tabBarActiveTintColor: "blue", // Active tab color
-      //   tabBarInactiveTintColor: "white", // Inactive tab color
-      //   tabBarLabelStyle: {
-      //     fontSize: 12,
-      //     fontWeight: "bold",
-      //   },
-      // }}
-    >
+    <Tabs>
       <Tabs.Screen
         name="index"
         options={{
@@ -30,6 +17,18 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: 'Explore',
+        }}
+      />
+      <Tabs.Screen
+        name="camera"
+        options={{
+          title: 'Camera',
+        }}
+      />
+      <Tabs.Screen
+        name="recipes"
+        options={{
+          title: 'Recipes',
         }}
       />
       <Tabs.Screen
