@@ -3,14 +3,13 @@ import React from 'react';
 import "../../global.css"
 
 export default function TabLayout() {
-
   return (
     <Tabs>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          // headerShown:false,
+          headerShown:false,
         }}
       />
       <Tabs.Screen

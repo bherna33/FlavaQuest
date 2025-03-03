@@ -5,7 +5,7 @@ interface SearchBarProps{
     className: string;
 }
 
-export function SearchBar(props: SearchBarProps){
+export default function SearchBar(props: SearchBarProps){
     return (
         <TextInput
             className= {props.className}

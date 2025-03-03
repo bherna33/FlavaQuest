@@ -2,7 +2,7 @@ import { Text } from "react-native";
 
 interface TitleProps{
     title: string;
-    className?: string;
+    className: string;
 }
 
 export default function Title(props: TitleProps){
