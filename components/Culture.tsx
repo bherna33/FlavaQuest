@@ -2,21 +2,19 @@ import { ImageBackground, ImageSourcePropType, ScrollView, TouchableOpacity, Vie
 import Title from "./Title";
 
 interface CultureProps{
-    // containerStyles?: string;
-    imgStyles: string;
-    source?: ImageSourcePropType;
+    // source?: string;
     title: string;
-    // titleStyles: string;
 
 }
 
 export function Culture(props: CultureProps){
     return (
-        <TouchableOpacity className={"m-4 bg-gray-300 rounded-2xl h-32 w-32 "} >
-            <View className="relative">
-                <ImageBackground className={props.imgStyles} source={props.source}>
+        <TouchableOpacity className={" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"} >
+            <View >
+                {/* TODO: Makes source prop work properly */}
+                <ImageBackground className="rounded-2xl h-24 w-24 justify-center" source={require("../assets/images/react-logo.png")}>
                     <Title
-                        className="text-center font-bold m-4"
+                        className="text-center font-bold"
                         title={props.title}
                     />
                 </ImageBackground>

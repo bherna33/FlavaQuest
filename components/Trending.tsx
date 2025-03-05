@@ -15,6 +15,7 @@ export function Trending(props: TrendingProps){
     return (
         <TouchableOpacity>
             <View className={props.containerStyles} >
+                {/* TODO: Makes source prop work properly */}
                 <ImageBackground className={props.imageStyles} source={props.source}>
                     <View className={props.column}>
                         <Title
@@ -28,7 +29,6 @@ export function Trending(props: TrendingProps){
                             textStyles={props.textStyles}         
                         />
                     </View>
-                    
                 </ImageBackground>
             </View>
         </TouchableOpacity>
@@ -39,6 +39,7 @@ interface ButtonProps{
     title: string;
     buttonStyles: string;
     textStyles?: string;
+
 }
 
 export function Button(props: ButtonProps){
@@ -50,5 +51,4 @@ export function Button(props: ButtonProps){
             </Text>
         </TouchableOpacity>
     );
-    
 }
