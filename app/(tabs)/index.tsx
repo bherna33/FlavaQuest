@@ -7,10 +7,11 @@ import { View, SafeAreaView, ScrollView} from "react-native";
 
 export default function Index() {
     return (
-		<ScrollView 
-			showsVerticalScrollIndicator={false}
-		>
-			<SafeAreaView className="flex-1">
+		<SafeAreaView className="flex-1">
+			<ScrollView 
+				showsVerticalScrollIndicator={false}
+				
+			>
 				<View>
 					<Title
 						title="Start Your Quest for Flavor! "
@@ -35,23 +36,27 @@ export default function Index() {
 						items={[
 							<Culture
 								title="Trinidad & Tobago"
-
+								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
 
 							<Culture
 								title="Haiti"
+								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
 
 							<Culture
 								title="Africa"
+								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
 
 							<Culture
 								title="Jamaica"
+								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
 
 							<Culture
 								title="Chinese"
+								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
 
 						]}
@@ -63,30 +68,58 @@ export default function Index() {
 						subTitle="See All"
 						subTitleStyle="mt-2"
 						containerStyle="m-4"
+						titleContainerStyles="items-start absolute"
+						subTitleContainerStyles="items-end"
 					/>
 
 					<Carousel
+						carouselStyles="rounded-xl"
 						items={[
 							<Item
 								foodName="Food Item"
+								containerStyles="w-72  ml-4"
+								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
+								buttonContainerStyles="items-end"
+								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
+
 							/>,
 							<Item
 								foodName="Food Item2"
+								containerStyles="w-72 ml-4"
+								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
+								buttonContainerStyles="items-end"
+								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
+
 							/>,
 							<Item
 								foodName="Food Item3"
+								containerStyles="w-72 ml-4"
+								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
+								buttonContainerStyles="items-end"
+								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
+
 							/>,
 							<Item
 								foodName="Food Item4"
+								containerStyles="w-72 ml-4"
+								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
+								buttonContainerStyles="items-end"
+								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
+
 							/>,
 							<Item
 								foodName="Food Item5"
+								containerStyles="w-72 ml-4"
+								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
+								buttonContainerStyles="items-end"
+								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
+
 							/>,
 						]}
 					/>
 
 				</View>
-			</SafeAreaView>
-		</ScrollView>
+			</ScrollView>
+		</SafeAreaView>
     );
 }

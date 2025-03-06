@@ -4,12 +4,13 @@ import Title from "./Title";
 interface CultureProps{
     // source?: string;
     title: string;
+    containerStyles: string;
 
 }
 
 export function Culture(props: CultureProps){
     return (
-        <TouchableOpacity className={" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"} >
+        <TouchableOpacity className={props.containerStyles} >
             <View >
                 {/* TODO: Makes source prop work properly */}
                 <ImageBackground className="rounded-2xl h-24 w-24 justify-center" source={require("../assets/images/react-logo.png")}>

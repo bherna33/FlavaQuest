@@ -8,19 +8,21 @@ interface RecommendedProps{
     subTitle: string;
     subTitleStyle: string;
     containerStyle?: string;
+    titleContainerStyles: string;
+    subTitleContainerStyles: string;
 }
 
 export function Recommended(props: RecommendedProps){
     return (
         <View className={props.containerStyle}>
-            <View className="items-start absolute">
+            <View className={props.titleContainerStyles}>
                 <Title 
                     title={props.title}
                     className={props.titleStyle}
                 />
             </View>
 
-            <View className="items-end">
+            <View className={props.subTitleContainerStyles}>
                 <Title 
                     title={props.subTitle}
                     className={props.subTitleStyle}
@@ -32,24 +34,35 @@ export function Recommended(props: RecommendedProps){
 }
 
 interface ItemProps{
+    containerStyles: string;
     foodName: string;
+    foodContainerStyles: string;
+    buttonContainerStyles: string
+    buttonStyles: string;
     rating?: string;
 
 }
 
 export function Item(props:ItemProps){
     return (
-        <View className="w-72 ml-4 ">
-            <Food/>
+        <View className={props.containerStyles}>
             <TouchableOpacity>
+                <Food
+                    containerStyles={props.foodContainerStyles}
+                    buttonContainerStyles={props.buttonContainerStyles}
+                    buttonStyles={props.buttonStyles}
+                />
+            
                 <Recommended
                     title={props.foodName}
                     titleStyle="text-2xl font-bold"
                     subTitle="⭐ 4.5"
                     subTitleStyle="text-2xl font-bold"
+                    titleContainerStyles="items-start absolute"
+                    subTitleContainerStyles="items-end"
                 />
                 <Title 
-                    className="text-slate-400"
+                    className={"text-slate-400"}
                     title="Lorem ipsum dolor sit amet..."
                 />
             </TouchableOpacity>
@@ -59,22 +72,26 @@ export function Item(props:ItemProps){
 
 interface FoodProps{
     imageStyles?: string;
+    containerStyles: string;
+    buttonStyles: string;
+    buttonContainerStyles: string;
+    // textStyles: string;
 }
 
 export function Food(props:FoodProps){
     return (
-        <TouchableOpacity className="h-48 w-72 bg-gray-300 rounded-3xl shadow-sm" >
+        <View className={props.containerStyles} >
             <ImageBackground className={props.imageStyles}>
-                <View className="items-end">
+                <View className={props.buttonContainerStyles}>
                     <Button 
-                        buttonStyles="bg-gray-500 border-2 rounded-2xl w-14 h-12"
+                        buttonStyles={props.buttonStyles}
                         title="+"
-                        textStyles="text-4xl text-center"
+                        textStyles={"text-4xl text-center"}
                     />
                 </View>
                 
             </ImageBackground>
-        </TouchableOpacity>
+        </View>
     );
 }
 
