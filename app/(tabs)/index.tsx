@@ -10,7 +10,6 @@ export default function Index() {
 		<SafeAreaView className="flex-1">
 			<ScrollView 
 				showsVerticalScrollIndicator={false}
-				
 			>
 				<View>
 					<Title
