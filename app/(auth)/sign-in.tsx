@@ -1,10 +1,10 @@
-import { RouteButton, InputBox, InLine } from "@/components/ui";
+import { RouteButton, InputBox, InLine, Or } from "@/components/ui";
 import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function SignIn(){
     return(
-        <View className="bg-white">
+        <View>
             <Text className="font-bold text-3xl text-center my-6">
                 FlavaQuest
             </Text>
@@ -16,20 +16,21 @@ export default function SignIn(){
             <InputBox
                 placeholder="example@email.com"
                 title="Email"
-                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-white" 
+                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100" 
             />
 
             <InputBox
                 placeholder="Password"
                 title="Password"
-                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-white" 
+                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100" 
             />
 
             <InLine
                 leftText="Remember me"
-                leftTextStyle=""
+                leftTextStyle="absolute"
                 rightText="Forgot Password?"
-                rightTextStyle="text-sky-600 "
+                rightTextStyle="text-sky-600 text-right"
+                container="mx-4"
             /> 
 
             <RouteButton 
@@ -37,9 +38,7 @@ export default function SignIn(){
                 route="../(tabs)"
             />
 
-            <Text className="text-center text-xl my-8">
-                -or-
-            </Text>
+            <Or/>
 
             <RouteButton 
                 text="Sign in with Google"

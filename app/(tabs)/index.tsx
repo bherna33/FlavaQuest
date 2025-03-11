@@ -12,6 +12,7 @@ export default function Index() {
 				<Text className="font-bold text-4xl text-center m-4 py-4">
 					Start Your Quest for Flavor!
 				</Text>
+				
 				<SearchBar 
 					placeholder="🔍 Search Foods, Drinks, Deserts"
 				/>
@@ -24,6 +25,7 @@ export default function Index() {
 					textStyles="text-2xl text-center"
 					column="max-w-64 mt-5"
 				/>
+				
 				<Carousel
 					styles="rounded-xl"
 					items={[
@@ -60,9 +62,10 @@ export default function Index() {
 
 				<InLine 
 					leftText="Recommended For You"
-					leftTextStyle="text-2xl font-bold"
+					leftTextStyle="text-2xl absolute font-bold"
 					rightText="See All"
-					rightTextStyle="items-end"
+					rightTextStyle="text-right mt-2"
+					container="m-4"
 				/>
 
 				<Carousel

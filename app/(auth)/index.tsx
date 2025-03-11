@@ -12,7 +12,6 @@ export default function Index(){
             <RouteButton
                 route="./sign-up"
                 text="Sign Up"
-                
             />
 
             <Link href={"/sign-in"} className="font-bold text-2xl text-center p-4 m-4">

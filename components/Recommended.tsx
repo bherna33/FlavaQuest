@@ -22,12 +22,12 @@ export function Item(props:ItemProps){
             
                 <InLine
                     leftText={props.foodName}
-                    leftTextStyle="text-2xl font-bold"
+                    leftTextStyle="text-2xl font-bold absolute"
                     rightText="⭐ 4.5"
-                    rightTextStyle="text-2xl font-bold"
+                    rightTextStyle="text-2xl font-bold text-right"
                 />
 
-                <Text className={"text-slate-400"}>
+                <Text className={"text-slate-400 "}>
                     Lorem ipsum dolor sit amet...
                 </Text>
             </TouchableOpacity>
