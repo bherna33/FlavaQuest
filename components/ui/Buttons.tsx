@@ -1,5 +1,6 @@
 import { Link, RelativePathString } from "expo-router";
-import { View, TouchableOpacity, Text, ImageBackground, ImageSourcePropType} from "react-native";
+import { useState } from "react";
+import { View, TouchableOpacity, Text} from "react-native";
 
 interface ButtonProps{
     title: string;
@@ -9,8 +10,14 @@ interface ButtonProps{
 
 export function Button(props: ButtonProps){
 
+    const [count, setCount] = useState<number>(0);
+
+    function handlePress(){
+        setCount(count +1);
+    }
+
     return(
-        <TouchableOpacity className={props.buttonStyles}>
+        <TouchableOpacity className={props.buttonStyles} onPress={handlePress}>
             <Text className={props.textStyles}>
                 {props.title}
             </Text>

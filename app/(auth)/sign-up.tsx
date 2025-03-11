@@ -1,6 +1,6 @@
-import { RouteButton, InputBox, InLine, Or } from "@/components/ui";
+import { RouteButton, InputBox, InLine, Checkbox } from "@/components/ui";
 import { Link } from "expo-router";
-import { Text, View, TextInput } from "react-native";
+import { Text, View } from "react-native";
 
 export default function SignUp(){
     return(
@@ -12,19 +12,19 @@ export default function SignUp(){
             <InputBox
                 placeholder="example@email.com"
                 title="Email"
-                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100" 
+                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100"
             />
 
             <InputBox
                 placeholder="Password"
                 title="Password"
-                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100" 
+                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100"
             />
 
             <InputBox
                 placeholder="Password"
                 title="Confirm Password"
-                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100" 
+                textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100"
             />
 
             <InLine
@@ -33,26 +33,37 @@ export default function SignUp(){
                 rightText=""
                 rightTextStyle=""
                 container="mx-4"
-            /> 
+                checkBox={<Checkbox/>}
+            />
 
-            <RouteButton 
+            <RouteButton
                 text="Sign Up"
                 route="../(tabs)"
             />
 
-            <Or/>
+            <View className="justify-center p-4 my-4">
+                <View>
+                    <View className="border">
+                    </View>
+                </View>
+                <View className=" absolute w-screen items-center ">
+                    <Text className="text-xl bg-gray-100 p-2">
+                        or
+                    </Text>
+                </View>
+            </View>
 
-            <RouteButton 
+            <RouteButton
                 text="Sign up with Google"
                 route="../(tabs)"
             />
 
-            <RouteButton 
+            <RouteButton
                 text="Sign up with Apple"
                 route="../(tabs)"
             />
 
-            <RouteButton 
+            <RouteButton
                 text="Sign up with Facebook"
                 route="../(tabs)"
             />
@@ -60,8 +71,7 @@ export default function SignUp(){
             <Text className="text-center my-8">
                 Already have an account? <Link href={"/(auth)/sign-in"} className="font-bold">Sign In</Link>
             </Text>
-            
-        </View>
 
+        </View>
     );
 }
