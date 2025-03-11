@@ -1,24 +1,42 @@
-import { Carousel, Culture } from "@/components/Culture";
-import { Item, Recommended } from "@/components/Recommended";
-import SearchBar from "@/components/SearchBar";
-import Title from "@/components/Title";
+import { Item } from "@/components/Recommended";
 import { Trending } from "@/components/Trending";
-import { View, SafeAreaView, ScrollView} from "react-native";
+import { Card, InLine, SearchBar, Carousel} from "@/components/ui";
+import React from "react";
+import { View, ScrollView, Text, SafeAreaView, RefreshControl} from "react-native";
 
 export default function Index() {
+
+	const [refreshing, setRefreshing] = React.useState(false);
+
+	const onRefresh = React.useCallback(() => {
+		setRefreshing(true);
+		setTimeout(() => {
+			setRefreshing(false);
+		}, 2000);
+	}, [])
+
     return (
-		<SafeAreaView className="flex-1">
+		<SafeAreaView className='flex-1'>
 			<ScrollView 
 				showsVerticalScrollIndicator={false}
+				refreshControl={
+					<RefreshControl 
+						refreshing = {refreshing} 
+						onRefresh={onRefresh}
+						tintColor={"black"} // IOS
+						title="Fetching more Flavors"
+						titleColor={"black"}
+						// colors={"blue"} // Android
+					/>
+				}
 			>
 				<View>
-					<Title
-						title="Start Your Quest for Flavor! "
-						className="font-bold text-4xl text-center m-4 py-4"
-					/>
-					<SearchBar
+					<Text className="font-bold text-4xl text-center m-4 py-4">
+						Start Your Quest for Flavor!
+					</Text>
+					
+					<SearchBar 
 						placeholder="🔍 Search Foods, Drinks, Deserts"
-						className="border-2 p-4 rounded-2xl m-4"
 					/>
 
 					<Trending
@@ -29,58 +47,58 @@ export default function Index() {
 						textStyles="text-2xl text-center"
 						column="max-w-64 mt-5"
 					/>
-
+					
 					<Carousel
-						carouselStyles="rounded-xl"
+						styles="rounded-xl"
 						items={[
-							<Culture
+							<Card
 								title="Trinidad & Tobago"
 								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
-
-							<Culture
+							<Card
 								title="Haiti"
 								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
-
-							<Culture
+							<Card
 								title="Africa"
 								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
-
-							<Culture
+							<Card
 								title="Jamaica"
 								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
-
-							<Culture
+							<Card
 								title="Chinese"
 								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
 							/>,
-
+							<Card
+								title="Japanese"
+								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
+							/>,
+							<Card
+								title="Korean"
+								containerStyles=" bg-gray-300 rounded-2xl h-24 w-24 justify-center ml-4"
+							/>,
 						]}
 					/>
 
-					<Recommended
-						title="Recommended For You"
-						titleStyle="text-2xl font-bold"
-						subTitle="See All"
-						subTitleStyle="mt-2"
-						containerStyle="m-4"
-						titleContainerStyles="items-start absolute"
-						subTitleContainerStyles="items-end"
+					<InLine 
+						leftText="Recommended For You"
+						leftTextStyle="text-2xl absolute font-bold"
+						rightText="See All"
+						rightTextStyle="text-right mt-2"
+						container="m-4"
 					/>
 
 					<Carousel
-						carouselStyles="rounded-xl"
+						styles="rounded-xl"
 						items={[
 							<Item
 								foodName="Food Item"
-								containerStyles="w-72  ml-4"
+								containerStyles="w-72 ml-4"
 								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
 								buttonContainerStyles="items-end"
 								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
-
 							/>,
 							<Item
 								foodName="Food Item2"
@@ -88,7 +106,6 @@ export default function Index() {
 								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
 								buttonContainerStyles="items-end"
 								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
-
 							/>,
 							<Item
 								foodName="Food Item3"
@@ -96,7 +113,6 @@ export default function Index() {
 								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
 								buttonContainerStyles="items-end"
 								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
-
 							/>,
 							<Item
 								foodName="Food Item4"
@@ -104,7 +120,6 @@ export default function Index() {
 								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
 								buttonContainerStyles="items-end"
 								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
-
 							/>,
 							<Item
 								foodName="Food Item5"
@@ -112,11 +127,9 @@ export default function Index() {
 								foodContainerStyles="w-72 h-48 bg-gray-300 rounded-3xl shadow-sm"
 								buttonContainerStyles="items-end"
 								buttonStyles="bg-gray-50 border-2 rounded-2xl w-14 h-12"
-
 							/>,
 						]}
 					/>
-
 				</View>
 			</ScrollView>
 		</SafeAreaView>

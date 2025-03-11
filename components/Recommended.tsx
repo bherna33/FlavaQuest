@@ -1,37 +1,6 @@
-import { View, Linking, TouchableOpacity, ImageBackground} from "react-native";
-import Title from "./Title";
-import { Button } from "./Trending";
-
-interface RecommendedProps{
-    title: string;
-    titleStyle: string;
-    subTitle: string;
-    subTitleStyle: string;
-    containerStyle?: string;
-    titleContainerStyles: string;
-    subTitleContainerStyles: string;
-}
-
-export function Recommended(props: RecommendedProps){
-    return (
-        <View className={props.containerStyle}>
-            <View className={props.titleContainerStyles}>
-                <Title 
-                    title={props.title}
-                    className={props.titleStyle}
-                />
-            </View>
-
-            <View className={props.subTitleContainerStyles}>
-                <Title 
-                    title={props.subTitle}
-                    className={props.subTitleStyle}
-                    // onPress={() => Linking.openURL("google.com")}
-                />
-            </View>
-        </View>
-    );
-}
+import { View, TouchableOpacity, ImageBackground, Text} from "react-native";
+import { Button } from "./ui/Buttons";
+import { InLine } from "./ui/Text";
 
 interface ItemProps{
     containerStyles: string;
@@ -39,8 +8,6 @@ interface ItemProps{
     foodContainerStyles: string;
     buttonContainerStyles: string
     buttonStyles: string;
-    rating?: string;
-
 }
 
 export function Item(props:ItemProps){
@@ -53,18 +20,16 @@ export function Item(props:ItemProps){
                     buttonStyles={props.buttonStyles}
                 />
             
-                <Recommended
-                    title={props.foodName}
-                    titleStyle="text-2xl font-bold"
-                    subTitle="⭐ 4.5"
-                    subTitleStyle="text-2xl font-bold"
-                    titleContainerStyles="items-start absolute"
-                    subTitleContainerStyles="items-end"
+                <InLine
+                    leftText={props.foodName}
+                    leftTextStyle="text-2xl font-bold absolute"
+                    rightText="⭐ 4.5"
+                    rightTextStyle="text-2xl font-bold text-right"
                 />
-                <Title 
-                    className={"text-slate-400"}
-                    title="Lorem ipsum dolor sit amet..."
-                />
+
+                <Text className={"text-slate-400 "}>
+                    Lorem ipsum dolor sit amet...
+                </Text>
             </TouchableOpacity>
         </View>
     );
@@ -75,7 +40,6 @@ interface FoodProps{
     containerStyles: string;
     buttonStyles: string;
     buttonContainerStyles: string;
-    // textStyles: string;
 }
 
 export function Food(props:FoodProps){
@@ -89,7 +53,6 @@ export function Food(props:FoodProps){
                         textStyles={"text-4xl text-center"}
                     />
                 </View>
-                
             </ImageBackground>
         </View>
     );

@@ -1,5 +1,5 @@
 import { View, TouchableOpacity, Text, ImageBackground, ImageSourcePropType} from "react-native";
-import Title from "./Title";
+import { Button } from "./ui/Buttons";
 
 interface TrendingProps{
     imageStyles: string;
@@ -18,10 +18,9 @@ export function Trending(props: TrendingProps){
                 {/* TODO: Makes source prop work properly */}
                 <ImageBackground className={props.imageStyles} source={props.source}>
                     <View className={props.column}>
-                        <Title
-                            title="Look At What Is Trending Now!"
-                            className={props.titleStyles}
-                        />
+                        <Text className={props.titleStyles}>
+                            Look At What Is Trending Now!
+                        </Text>
 
                         <Button
                             title="Get Recipe"
@@ -31,24 +30,6 @@ export function Trending(props: TrendingProps){
                     </View>
                 </ImageBackground>
             </View>
-        </TouchableOpacity>
-    );
-}
-
-interface ButtonProps{
-    title: string;
-    buttonStyles: string;
-    textStyles?: string;
-
-}
-
-export function Button(props: ButtonProps){
-
-    return(
-        <TouchableOpacity className={props.buttonStyles}>
-            <Text className={props.textStyles}>
-                {props.title}
-            </Text>
         </TouchableOpacity>
     );
 }
