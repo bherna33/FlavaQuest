@@ -9,14 +9,16 @@ interface InputBoxProps {
 
 export function InputBox({ placeholder, title, textStyles}: InputBoxProps) {
 
-	const [inputValue, setInputValue] = useState("");
-	
+	const [inputValue, setInputValue] = useState<string>("");
+
   	return (
 		<View className="p-4 ">
 			<TextInput
 				placeholder={placeholder}
 				placeholderTextColor={"gray"}
 				className="border-2 border-gray-300 p-4 rounded-2xl text-xl"
+				value={inputValue}
+				onChangeText={setInputValue}
 			/>
 
 			<Text className={textStyles} >

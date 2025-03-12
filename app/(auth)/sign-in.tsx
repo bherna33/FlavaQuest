@@ -1,4 +1,4 @@
-import { RouteButton, InputBox, InLine } from "@/components/ui";
+import { RouteButton, InputBox, InLine, Or } from "@/components/ui";
 import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
@@ -38,17 +38,7 @@ export default function SignIn(){
                 route="../(tabs)"
             />
 
-            <View className="justify-center p-4 my-4">
-                <View>
-                    <View className="border">
-                    </View>
-                </View>
-                <View className=" absolute w-screen items-center ">
-                    <Text className="text-xl bg-gray-100 p-2">
-                        or
-                    </Text>
-                </View>
-            </View>
+            <Or/>
 
             <RouteButton
                 text="Sign in with Google"
