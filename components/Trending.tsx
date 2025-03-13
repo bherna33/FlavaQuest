@@ -1,5 +1,5 @@
 import { View, TouchableOpacity, Text, ImageBackground, ImageSourcePropType} from "react-native";
-import { Button } from "./ui/Buttons";
+import { Button } from "./ui";
 
 interface TrendingProps{
     imageStyles: string;

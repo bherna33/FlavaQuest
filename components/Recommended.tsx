@@ -1,6 +1,5 @@
 import { View, TouchableOpacity, ImageBackground, Text} from "react-native";
-import { Button } from "./ui/Buttons";
-import { InLine } from "./ui/Text";
+import { Button, InLine } from "./ui";
 
 interface ItemProps{
     containerStyles: string;

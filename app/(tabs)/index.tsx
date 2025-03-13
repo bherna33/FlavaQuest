@@ -1,5 +1,4 @@
-import { Item } from "@/components/Recommended";
-import { Trending } from "@/components/Trending";
+import { Item, Trending } from "@/components";
 import { Card, InLine, SearchBar, Carousel} from "@/components/ui";
 import React from "react";
 import { View, ScrollView, Text, SafeAreaView, RefreshControl} from "react-native";
