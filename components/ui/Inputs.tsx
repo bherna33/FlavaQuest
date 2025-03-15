@@ -50,7 +50,7 @@ export function Checkbox(){
 	}
 
 	return (
-		<TouchableOpacity className="border-2" onPress={change}>
+		<TouchableOpacity className="border-2 rounded-xl" onPress={change}>
 			<Text className="font-bold">
 				{isSelected ? "X": ""}
 			</Text>			

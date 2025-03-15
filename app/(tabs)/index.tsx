@@ -48,7 +48,7 @@ export default function Index() {
 					/>
 					
 					<Carousel
-						styles="rounded-xl"
+						styles="rounded-xl" 
 						items={[
 							<Card
 								title="Trinidad & Tobago"
@@ -83,9 +83,9 @@ export default function Index() {
 
 					<InLine 
 						leftText="Recommended For You"
-						leftTextStyle="text-2xl absolute font-bold"
+						leftTextStyle="text-2xl font-bold"
 						rightText="See All"
-						rightTextStyle="text-right mt-2"
+						rightTextStyle=" mt-2"
 						container="m-4"
 					/>
 

@@ -6,18 +6,13 @@ interface ButtonProps{
     title: string;
     buttonStyles: string;
     textStyles?: string;
+    onPress?: () => void;
 }
 
 export function Button(props: ButtonProps){
 
-    const [count, setCount] = useState<number>(0);
-
-    function handlePress(){
-        setCount(count +1);
-    }
-
     return(
-        <TouchableOpacity className={props.buttonStyles} onPress={handlePress}>
+        <TouchableOpacity className={props.buttonStyles} onPress={props.onPress}>
             <Text className={props.textStyles}>
                 {props.title}
             </Text>

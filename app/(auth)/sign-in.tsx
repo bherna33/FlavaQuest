@@ -27,9 +27,9 @@ export default function SignIn(){
 
             <InLine
                 leftText="Remember me"
-                leftTextStyle="absolute"
+                leftTextStyle=""
                 rightText="Forgot Password?"
-                rightTextStyle="text-sky-600 text-right"
+                rightTextStyle="text-sky-600 "
                 container="mx-4"
             />
 

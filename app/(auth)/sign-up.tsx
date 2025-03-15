@@ -29,9 +29,7 @@ export default function SignUp(){
 
             <InLine
                 leftText="Remember me"
-                leftTextStyle=""
                 rightText=""
-                rightTextStyle=""
                 container="mx-4"
                 checkBox={<Checkbox/>}
             />

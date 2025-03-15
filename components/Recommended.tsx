@@ -21,9 +21,10 @@ export function Item(props:ItemProps){
             
                 <InLine
                     leftText={props.foodName}
-                    leftTextStyle="text-2xl font-bold absolute"
+                    leftTextStyle="text-2xl font-bold "
                     rightText="⭐ 4.5"
-                    rightTextStyle="text-2xl font-bold text-right"
+                    rightTextStyle="text-2xl font-bold"
+                    
                 />
 
                 <Text className={"text-slate-400 "}>

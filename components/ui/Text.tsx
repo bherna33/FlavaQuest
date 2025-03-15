@@ -12,15 +12,13 @@ checkBox?: ReactNode;
 
 export function InLine({ leftText, leftTextStyle, rightText, rightTextStyle, container, checkBox }: InLineProps) {
     return (
-        <View className={container}>
-            <View>
-            <Text className={rightTextStyle}>
-                {rightText}
-            </Text>
+        <View className={"flex-row justify-between " + container}>
             <Text className={leftTextStyle}>
                 {checkBox} {leftText}
             </Text>
-            </View>
+            <Text className={rightTextStyle}>
+                {rightText}
+            </Text>
         </View>
     );
 }

@@ -7,19 +7,17 @@ interface CarouselProps{
 
 export function Carousel(props: CarouselProps){
     return (
-        <View>
             <ScrollView 
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             className={props.styles}
             >
                 {props.items.map((item, index) => (
-                    <View key={index} >
+                    <View  key={index} >
                             {item}
                     </View>
                 ))}
 
             </ScrollView>
-        </View>
     );
 }
