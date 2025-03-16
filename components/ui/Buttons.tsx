@@ -1,5 +1,5 @@
 import { Link, RelativePathString } from "expo-router";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { View, TouchableOpacity, Text} from "react-native";
 
 interface ButtonProps{
@@ -34,4 +34,19 @@ export function RouteButton(props: RouteButtonProps){
         </View>
     );
     
+}
+
+interface IconButtonProps{
+    icon: ReactNode;
+    containerStyles?: string;
+    onPress: () => void;
+}
+
+export function IconButton(props: IconButtonProps){
+
+    return(
+        <TouchableOpacity className={props.containerStyles} onPress={props.onPress}>
+            {props.icon}
+        </TouchableOpacity>
+    );
 }

@@ -1,7 +1,9 @@
-import { Button, Card, InLine } from "@/components/ui";
+import { Button, Card, IconButton, InLine } from "@/components/ui";
 import { CameraView } from "expo-camera";
 import { useState } from "react";
 import { Image, Modal, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export default function Camera(){
 
@@ -24,23 +26,19 @@ export default function Camera(){
                         >
                             <SafeAreaView className="flex-1">
                                 
-                                <View className=" flex-row justify-between mx-4 z-10 h-64 ">
-                                    <Button 
-                                        title="⬅"
-                                        buttonStyles="border-2 rounded-3xl size-16 bg-white justify-center"
+                                <View className=" flex-row justify-between mx-8 z-10 h-64 ">
+                                    <IconButton
+                                        icon={<MaterialIcons name="arrow-back" size={32} color="black" />}
                                         onPress={change}
-                                        textStyles="text-center text-5xl"
                                     />
-                                    <Button 
-                                        title="🩷"
-                                        buttonStyles="border-2 rounded-3xl size-16 bg-white justify-center"
+                                    <IconButton
+                                        icon={<FontAwesome name="heart" size={32} color="red" />}
                                         onPress={change}
-                                        textStyles="text-center text-5xl"
                                     />
                                 </View>
 
                                 <View className=" w-full h-80 absolute justify-center items-center">
-                                    <Image className=" w-full h-96 bg-red-500" source={require("../../assets/images/react-logo.png")}/>
+                                    <Image className=" w-full h-96 bg-gray-500" source={require("../../assets/images/react-logo.png")}/>
                                 </View>
 
                                 <View className="bg-white rounded-t-3xl flex-1 z-10 p-4">
@@ -146,10 +144,8 @@ export default function Camera(){
                         </ScrollView>                                        
                     </Modal>
 
-                    <TouchableOpacity className="border-2 rounded-3xl size-24 bg-white justify-center" onPress={change}>
-                        <Text className="text-center text-5xl">
-                            📷
-                        </Text>
+                    <TouchableOpacity className="border-2 rounded-full size-24 bg-white justify-center items-center" onPress={change}>
+                        <View className="border-2 rounded-full size-20 "/>
                     </TouchableOpacity>
 
                 </View>

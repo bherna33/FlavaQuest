@@ -1,4 +1,4 @@
-export { Button, RouteButton} from "./Buttons"
+export { Button, RouteButton, IconButton} from "./Buttons"
 export { Card } from "./Card"
 export { InputBox, SearchBar } from "./Inputs"
 export { Carousel } from "./Carousel"
