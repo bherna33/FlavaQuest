@@ -16,11 +16,11 @@ export default function Index() {
 
     return (
 		<SafeAreaView className='flex-1'>
-			<ScrollView 
+			<ScrollView
 				showsVerticalScrollIndicator={false}
 				refreshControl={
-					<RefreshControl 
-						refreshing = {refreshing} 
+					<RefreshControl
+						refreshing = {refreshing}
 						onRefresh={onRefresh}
 						tintColor={"black"} // IOS
 						title="Fetching more Flavors"
@@ -33,8 +33,8 @@ export default function Index() {
 					<Text className="font-bold text-4xl text-center m-4 py-4">
 						Start Your Quest for Flavor!
 					</Text>
-					
-					<SearchBar 
+
+					<SearchBar
 						placeholder="🔍 Search Foods, Drinks, Deserts"
 					/>
 
@@ -46,9 +46,9 @@ export default function Index() {
 						textStyles="text-2xl text-center"
 						column="max-w-64 mt-5"
 					/>
-					
+
 					<Carousel
-						styles="rounded-xl" 
+						styles="rounded-xl"
 						items={[
 							<Card
 								title="Trinidad & Tobago"
@@ -81,7 +81,7 @@ export default function Index() {
 						]}
 					/>
 
-					<InLine 
+					<InLine
 						leftText="Recommended For You"
 						leftTextStyle="text-2xl font-bold"
 						rightText="See All"

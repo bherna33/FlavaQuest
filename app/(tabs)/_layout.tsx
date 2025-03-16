@@ -3,15 +3,20 @@ import React from 'react';
 import Entypo from '@expo/vector-icons/Entypo';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { HapticTab } from '@/components';
 
 export default function TabLayout() {
-  return (
-	<Tabs>
+	return (
+		<Tabs
+  			screenOptions={{
+    		tabBarButton: HapticTab,
+    		headerShown: false,
+  			}}
+		>
 		<Tabs.Screen
 			name="index"
 			options={{
 			title: 'Home',
-			headerShown:false,
 			tabBarIcon: () => <Entypo name="home" size={24} color="black" />,
 			}}
 		/>
@@ -26,7 +31,6 @@ export default function TabLayout() {
 			name="camera"
 			options={{
 			title: 'Camera',
-			headerShown:false,
 			tabBarIcon: () => <Entypo name="camera" size={24} color="black" />,
 			}}
 		/>
@@ -41,7 +45,6 @@ export default function TabLayout() {
 			name="settings"
 			options={{
 			title: 'Settings',
-			headerShown:false,
 			tabBarIcon: () => <Ionicons name="settings" size={24} color="black" />
 			}}
 		/>

@@ -7,7 +7,7 @@ interface CarouselProps{
 
 export function Carousel(props: CarouselProps){
     return (
-            <ScrollView 
+            <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             className={props.styles}
@@ -17,7 +17,6 @@ export function Carousel(props: CarouselProps){
                             {item}
                     </View>
                 ))}
-
             </ScrollView>
     );
 }

@@ -1,6 +1,7 @@
 import { Link, RelativePathString } from "expo-router";
-import { ReactNode, useState } from "react";
-import { View, TouchableOpacity, Text} from "react-native";
+import { ReactNode } from "react";
+import { View, TouchableOpacity, Text } from "react-native";
+import * as Haptics from 'expo-haptics';
 
 interface ButtonProps{
     title: string;
@@ -10,9 +11,8 @@ interface ButtonProps{
 }
 
 export function Button(props: ButtonProps){
-
     return(
-        <TouchableOpacity className={props.buttonStyles} onPress={props.onPress}>
+        <TouchableOpacity className={props.buttonStyles} onPress={props.onPress} onPressIn={() =>Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}>
             <Text className={props.textStyles}>
                 {props.title}
             </Text>
@@ -33,7 +33,6 @@ export function RouteButton(props: RouteButtonProps){
             </Link>
         </View>
     );
-    
 }
 
 interface IconButtonProps{
@@ -43,9 +42,8 @@ interface IconButtonProps{
 }
 
 export function IconButton(props: IconButtonProps){
-
     return(
-        <TouchableOpacity className={props.containerStyles} onPress={props.onPress}>
+        <TouchableOpacity className={props.containerStyles} onPress={props.onPress} onPressIn={() =>Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}>
             {props.icon}
         </TouchableOpacity>
     );

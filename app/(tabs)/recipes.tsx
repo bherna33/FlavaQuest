@@ -1,11 +1,21 @@
-import { Text, View } from "react-native";
+import { Collections } from "@/components";
+import { SearchBar } from "@/components/ui";
+import { SafeAreaView, ScrollView, Text } from "react-native";
 
 export default function Recipes() {
 	return (
-		<View className="flex-1 justify-center items-center">
-			<Text className="text-center text-2xl">
-                This is the Recipes Page
-            </Text>
-		</View>
+		<SafeAreaView className="flex-1">
+			<Text className="p-4 text-3xl font-bold">
+				Your Saved Recipes
+			</Text>
+			<SearchBar 
+				placeholder="Search your recipes"
+			/>
+			<ScrollView>
+				<Collections/>
+				<Collections/>
+				<Collections/>
+			</ScrollView>
+		</SafeAreaView>
 	);
 }

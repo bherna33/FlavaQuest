@@ -18,13 +18,12 @@ export function Item(props:ItemProps){
                     buttonContainerStyles={props.buttonContainerStyles}
                     buttonStyles={props.buttonStyles}
                 />
-            
+
                 <InLine
                     leftText={props.foodName}
                     leftTextStyle="text-2xl font-bold "
                     rightText="⭐ 4.5"
                     rightTextStyle="text-2xl font-bold"
-                    
                 />
 
                 <Text className={"text-slate-400 "}>
@@ -47,7 +46,7 @@ export function Food(props:FoodProps){
         <View className={props.containerStyles} >
             <ImageBackground className={props.imageStyles}>
                 <View className={props.buttonContainerStyles}>
-                    <Button 
+                    <Button
                         buttonStyles={props.buttonStyles}
                         title="+"
                         textStyles={"text-4xl text-center"}

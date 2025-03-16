@@ -11,9 +11,9 @@ export default function Settings() {
 			<Text className="text-6xl font-bold p-4">
 				Settings
 			</Text>
-			<View className="flex-1 bg-gray-300 p-2 ">
+			<View className="flex-1 bg-gray-300 p-2 rounded-t-3xl ">
 				<Text className="text-4xl font-bold px-2 py-4">
-					General 
+					General
 				</Text>
 
 				<SettingsLink
@@ -39,7 +39,7 @@ export default function Settings() {
 				/>
 
 				<Text className="text-4xl font-bold px-2 py-4">
-					Support 
+					Support
 				</Text>
 
 				<SettingsLink

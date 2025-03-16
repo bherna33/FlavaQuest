@@ -25,7 +25,7 @@ export function Trending(props: TrendingProps){
                         <Button
                             title="Get Recipe"
                             buttonStyles={props.buttonStyles}
-                            textStyles={props.textStyles}         
+                            textStyles={props.textStyles}
                         />
                     </View>
                 </ImageBackground>

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { TouchableOpacity, View, Text } from "react-native";
 import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
+import { Divider } from "./ui";
 
 interface SettingsLinkProps{
     icon: ReactNode;
@@ -18,9 +19,9 @@ export  function SettingsLink(props: SettingsLinkProps){
                         {props.text}
                     </Text>
                 </View>
-                <SimpleLineIcons name="arrow-right" size={24} color="black" className=""/>
+                <SimpleLineIcons name="arrow-right" size={24} color="black"/>
             </TouchableOpacity>
-            <View className="border "/>
+            <Divider />
         </View>
     );
 }
