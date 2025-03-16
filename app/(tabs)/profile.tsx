@@ -1,17 +1,55 @@
-import { Text, View } from "react-native";
+import { ProfileLink } from "@/components";
+import { SafeAreaView, Text, View } from "react-native";
 
 export default function Profile() {
-  return (
-    <View className="flex-1 ">
-      <Text className="text-sky-500"> This is the profile.</Text>
-      <View className="border-2 flex-row justify-between">
-        <Text>
-          hello world
-        </Text>
-        <Text>
-          I am inline
-        </Text>
-      </View>
-    </View>
-  );
+	return (
+		<SafeAreaView className="flex-1">
+			<Text className="text-6xl font-bold p-4">
+				Settings
+			</Text>
+			<View className="flex-1 bg-gray-300 ">
+				<Text className="text-4xl font-bold px-4 pt-4">
+					General 
+				</Text>
+
+				<ProfileLink
+					text="Account Information"
+					icon="🔼"
+				/>
+				<ProfileLink
+					text="Account Information"
+					icon="🔼"
+				/>
+				<ProfileLink
+					text="Account Information"
+					icon="🔼"
+				/>
+				<ProfileLink
+					text="Account Information"
+					icon="🔼"
+				/>
+				<ProfileLink
+					text="Account Information"
+					icon="🔼"
+				/>
+
+				<Text className="text-4xl font-bold px-4 pt-4">
+					Support 
+				</Text>
+				
+				<ProfileLink
+					text="Account Information"
+					icon="🔼"
+				/>
+				<ProfileLink
+					text="Account Information"
+					icon="🔼"
+				/>
+				<ProfileLink
+					text="Account Information"
+					icon="🔼"
+				/>
+			</View>
+		</SafeAreaView>
+	);
 }

@@ -42,18 +42,3 @@ export function SearchBar(props: SearchBarProps){
     );
 }
 
-export function Checkbox(){
-	const [isSelected, setSelected] = useState<boolean>(false);
-
-	function change(){
-		setSelected(!isSelected);
-	}
-
-	return (
-		<TouchableOpacity className="border-2 rounded-xl" onPress={change}>
-			<Text className="font-bold">
-				{isSelected ? "X": ""}
-			</Text>			
-		</TouchableOpacity>
-	);
-}

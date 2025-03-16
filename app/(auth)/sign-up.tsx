@@ -1,8 +1,13 @@
-import { RouteButton, InputBox, InLine, Checkbox } from "@/components/ui";
+import { RouteButton, InputBox, InLine } from "@/components/ui";
 import { Link } from "expo-router";
+import { useState } from "react";
 import { Text, View } from "react-native";
+import Checkbox from 'expo-checkbox';
 
 export default function SignUp(){
+
+    const [isSelected, setSelected] = useState<boolean>(false);
+
     return(
         <View>
             <Text className="font-bold text-3xl text-center my-6 ">
@@ -27,12 +32,12 @@ export default function SignUp(){
                 textStyles="text-gray-500 px-4 absolute ml-8 mt-2 bg-gray-100"
             />
 
-            <InLine
-                leftText="Remember me"
-                rightText=""
-                container="mx-4"
-                checkBox={<Checkbox/>}
-            />
+            <View className="mx-4 flex-row ">
+                <Checkbox  value={isSelected}  onValueChange={setSelected}  />
+                <Text className="px-2 text-md">
+                    Remember me
+                </Text>
+            </View>
 
             <RouteButton
                 text="Sign Up"
