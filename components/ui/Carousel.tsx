@@ -2,7 +2,7 @@ import { View, ScrollView } from "react-native";
 
 interface CarouselProps{
     items: React.ReactNode[];
-    styles: string;
+    // styles: string;
 }
 
 export function Carousel(props: CarouselProps){
@@ -10,7 +10,7 @@ export function Carousel(props: CarouselProps){
             <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            className={props.styles}
+            className={"rounded-xl "}
             >
                 {props.items.map((item, index) => (
                     <View  key={index} >

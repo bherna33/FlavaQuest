@@ -48,7 +48,7 @@ export default function Index() {
 					/>
 
 					<Carousel
-						styles="rounded-xl"
+						// styles="rounded-xl"
 						items={[
 							<Card
 								title="Trinidad & Tobago"
@@ -90,7 +90,7 @@ export default function Index() {
 					/>
 
 					<Carousel
-						styles="rounded-xl"
+						// styles="rounded-xl"
 						items={[
 							<Item
 								foodName="Food Item"

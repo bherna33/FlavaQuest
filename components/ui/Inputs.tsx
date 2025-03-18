@@ -16,7 +16,7 @@ export function InputBox({ placeholder, title, textStyles}: InputBoxProps) {
 			<TextInput
 				placeholder={placeholder}
 				placeholderTextColor={"gray"}
-				className="border-2 border-gray-300 p-4 rounded-2xl text-xl"
+				className="border-2 p-4 rounded-2xl text-xl"
 				value={inputValue}
 				onChangeText={setInputValue}
 			/>
