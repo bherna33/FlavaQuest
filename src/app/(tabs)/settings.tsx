@@ -1,4 +1,4 @@
-import { SettingsLink } from "@/components";
+import { SettingsLink } from "@/src/components";
 import { SafeAreaView, Text, View } from "react-native";
 import Feather from '@expo/vector-icons/Feather';
 import AntDesign from '@expo/vector-icons/AntDesign';

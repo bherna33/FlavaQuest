@@ -1,4 +1,4 @@
-import { Card, Divider, IconButton, InLine } from "@/components/ui";
+import { Card, Divider, IconButton, InLine } from "@/src/components/ui";
 import { CameraView } from "expo-camera";
 import { useState } from "react";
 import { Image, Modal, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native";

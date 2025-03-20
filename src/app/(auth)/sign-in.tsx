@@ -1,4 +1,4 @@
-import { RouteButton, InputBox, OrDivider, Divider } from "@/components/ui";
+import { RouteButton, InputBox, OrDivider } from "@/src/components/ui";
 import Checkbox from "expo-checkbox";
 import { Link } from "expo-router";
 import { useState } from "react";

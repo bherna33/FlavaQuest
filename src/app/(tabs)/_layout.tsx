@@ -3,7 +3,7 @@ import React from 'react';
 import Entypo from '@expo/vector-icons/Entypo';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { HapticTab } from '@/components';
+import { HapticTab } from '@/src/components';
 
 export default function TabLayout() {
 	return (
