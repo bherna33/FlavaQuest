@@ -1,4 +1,4 @@
-import { RouteButton, InputBox, OrDivider } from "@/components/ui";
+import { RouteButton, InputBox, OrDivider } from "@/src/components/ui";
 import { Link } from "expo-router";
 import { useState } from "react";
 import { Text, View } from "react-native";

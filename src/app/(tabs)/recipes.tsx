@@ -1,5 +1,5 @@
-import { Collections } from "@/components";
-import { SearchBar } from "@/components/ui";
+import { Collections } from "@/src/components";
+import { SearchBar } from "@/src/components/ui";
 import { SafeAreaView, ScrollView, Text } from "react-native";
 
 export default function Recipes() {

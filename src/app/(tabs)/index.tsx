@@ -1,5 +1,5 @@
-import { Item, Trending } from "@/components";
-import { Card, InLine, SearchBar, Carousel} from "@/components/ui";
+import { Item, Trending } from "@/src/components";
+import { Card, InLine, SearchBar, Carousel} from "@/src/components/ui";
 import React from "react";
 import { View, ScrollView, Text, SafeAreaView, RefreshControl} from "react-native";
 
